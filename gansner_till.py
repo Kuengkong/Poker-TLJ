@@ -1,13 +1,28 @@
 from tkinter import Tk, Label, Entry, Button
 from pygame.locals import *
 import pygame
+
 class PokerGame(Tk):
     def __init__(self):
         super().__init__()
         self.title("Poker Game")
 
         # Add your UI components and logic here
-        # Create a label for username
+        from tkinter import Tk, Label
+
+        class PokerGame(Tk):
+            def __init__(self):
+                super().__init__()
+                self.title("Poker Game")
+
+                # Create a label for username
+                self.username_label = Label(self, text="Username:")
+                self.username_label.pack()
+
+        # Create an instance of the PokerGame class and run the application
+        game = PokerGame()
+        game.mainloop()
+
         self.username_label = Label(self, text="Username:")
         self.username_label.pack()
 
@@ -42,27 +57,31 @@ class PokerGame(Tk):
     def create_game_screen(self, username, num_players):
         print()
 
+        def create_game_screen(self, username, num_players):
+            print()
 
-WINDOW_WIDTH, WINDOW_HEIGHT = 800, 600
-screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+    WINDOW_WIDTH, WINDOW_HEIGHT = 800, 600
+    screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 
-if __name__ == "__main__":
-    pygame.init()
-    # Initialize game variables and objects
+    if __name__ == "__main__":
+        pygame.init()
+        # Initialize game variables and objects
 
-    running = True
-    while running:
-        screen.fill((255, 0, 0))
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                running = False
-        # Handle game logic and drawing here
-        pygame.display.update()
-    pygame.quit()
+        running = True
+        while running:
+            screen.fill((140, 40, 50))
+            for event in pygame.event.get():
+                if event.type == QUIT:
+                    running = False
+            # Handle game logic and drawing here
+            pygame.display.update()
+        pygame.quit()
+
+
+
 
         # Add your game screen UI components and logic here
         # For example, create a canvas to display the game view from above
         # and deal cards to players
 
         # Once the game is set up, call a method to start the betting round
-
